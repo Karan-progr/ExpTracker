@@ -1,0 +1,19 @@
+.pie .outer-circle {
+    width: 50vw  ;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie .inner-circle {
+    width: 45vw;
+    aspect-ratio: 1;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

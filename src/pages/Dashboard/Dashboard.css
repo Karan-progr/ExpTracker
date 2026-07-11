@@ -1,0 +1,11 @@
+.qr {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    font-size: 1.5em;
+    background-color: navy;
+    padding: 0.5em;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}

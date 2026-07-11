@@ -1,0 +1,15 @@
+.Merchant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    text-indent: 1em;
+    margin: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.192);
+    box-shadow: 1px 1px 10px 0px rgba(53, 232, 8, 0.211);
+    border-radius: 1em;
+    padding: 10px 0px;
+}
+
+.Merchant p {
+    margin: 5px;
+}

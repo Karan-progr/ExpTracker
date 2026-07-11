@@ -1,0 +1,30 @@
+.Dashboard {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Dashboard-Header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.Dashboard-Header select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 10em;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.Dashboard p {
+    margin: 1em;
+    color: gray;
+}

@@ -1,0 +1,15 @@
+.Header {
+    text-align: left;
+    margin: 0px 0px;
+    background-image: linear-gradient(#0c0051, black);
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.Header img {
+    border-radius: 50%;
+}

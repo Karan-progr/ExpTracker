@@ -1,0 +1,18 @@
+.Merchants {
+    text-align: left;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Merchants h2 {
+    width: 100%;
+    text-indent: 1em;
+}
+
+.Merchants h3 {
+    padding: 3em 0;
+    color: gray;
+}

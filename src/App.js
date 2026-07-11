@@ -1,24 +1,22 @@
 import logo from './logo.svg';
+import Header from './components/Header/Header';
 import './App.css';
+import Dashboard from './pages/Dashboard/Dashboard';
+import {Routes, Route} from 'react-router-dom';
+import Scanner from './pages/Scanner/Scanner';
+import Login from './pages/Login/Login';
+import EnterAmount from './pages/EnterAmount/EnterAmount';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path = {"/"} element = {<Dashboard />}></Route>
+      <Route path = {"/scan"} element = {<Scanner />}></Route>
+      <Route path = {"/login"} element = {<Login />}></Route>
+      <Route path = {"/enter-amount"} element = {<EnterAmount />}></Route>
+    </Routes>
   );
 }
 
