@@ -45,7 +45,7 @@ const Scanner = () => {
                 scanner.stop().catch(console.error);
             }
         };
-    }, []);
+    }, [navigate]);
 
     return <div id="reader"></div>;
 };
