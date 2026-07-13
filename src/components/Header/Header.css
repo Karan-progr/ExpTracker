@@ -1,8 +1,6 @@
 .Header {
     text-align: left;
     margin: 0px 0px;
-    background-image: linear-gradient(#0c0051, black);
-    color: white;
     padding: 20px 20px;
     display: flex;
     align-items: center;
@@ -12,4 +10,23 @@
 
 .Header img {
     border-radius: 50%;
+}
+
+.Header button {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 14px;
+
+    background: var(--google-blue);
+    color: black;
+
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.Header button:hover {
+    background: #3367d6;
 }

@@ -1,0 +1,82 @@
+.Expenses {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+}
+
+.category-card {
+    background: var(--surface-color, white);
+    border: 1px solid var(--google-blue);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.card-header span {
+    font-weight: 600;
+}
+
+.progress {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--google-blue);
+    border-radius: inherit;
+    transition: width .4s ease;
+}
+
+.category-card p {
+    margin: 0;
+    color: #666;
+    font-size: .9rem;
+}
+
+.Expenses button {
+    background-color: var(--google-blue);
+    color: white;
+    padding: 1em;
+    width: fit-content;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 1px 1px 10px 0px rgba(66, 120, 255, 0.467);
+}
+
+
+.Expenses button:hover{
+    background-color: rgb(66, 119, 255);
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 0px rgba(66, 120, 255, 0.467);
+    transform: translateY(-2px);
+}
+
+.Expenses-header {
+    display: flex;
+    justify-content: space-between;
+}

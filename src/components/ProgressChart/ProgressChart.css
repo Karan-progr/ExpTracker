@@ -6,14 +6,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: conic-gradient(#10B981, rgb(255, 98, 0));
+    position: relative;
 }
 
 .pie .inner-circle {
-    width: 45vw;
+    width: 40vw;
     aspect-ratio: 1;
-    background-color: black;
+    background-color: var(--font-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pie .mask-circle {
+    width: 50vw  ;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
 }

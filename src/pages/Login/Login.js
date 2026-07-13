@@ -3,12 +3,16 @@ import "./Login.css";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "./firebase";
 import API_URL from "../../config"
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div className="Login">
+      <div className="login-header">
+
+      </div>
       <div className="login-card">
-        <h1>Exp Track</h1>
+        <h1>Track Mony</h1>
         <p>Take control of every rupee.</p>
 
         <button onClick={
@@ -17,18 +21,22 @@ const Login = () => {
 
               const idToken = await result.user.getIdToken();
 
-              localStorage.setItem({idToken:idToken})
+              localStorage.setItem("JWT", idToken)
 
-              await fetch("http://10.248.103.245:3500/login", {
-                  method: "POST",
-                  headers: {
-                      Authorization: `Bearer ${idToken}`,
-                  },
+              const res = await fetch (`${API_URL}/login`, {
+                method:"POST",
+                headers:{
+                  Authorization:`Bearer ${idToken}`
+                }
               });
+
+              console.log ("login succesfull");
+
           }
         }>
           Continue with Google
         </button>
+        <Link>Terms & conditions</Link>
       </div>
     </div>
   );
