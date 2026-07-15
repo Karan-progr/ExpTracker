@@ -6,8 +6,8 @@ import API_URL from '../../config';
 const EnterAmount = () => {
 
     const location = useLocation();
-    // const qrData = location.state.qrData;
-    const url = new URL("upi://pay?pa=8903206469@upi&pn=karan&am=$100&cu=INR");
+    const qrData = location.state.qrData;
+    const url = new URL(qrData);
     const params = Object.fromEntries(url.searchParams.entries());
 
     const [amount, setAmount] = useState(0);

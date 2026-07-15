@@ -33,7 +33,8 @@ const Dashboard = () => {
                     });
                     const parsedData = await response.json();
                     setDashboardData(parsedData);
-                    console.log (parsedData.name);
+                    if (parsedData.user_name === "")
+                        navigate("/login")
             }
 
             catch (err) {
