@@ -36,7 +36,7 @@ const Merchants = ({merchants}) => {
         { 
             merchants.length > 0? merchants.map ((merchant) => 
              <Merchant name = {merchant.payeeName} upiID = {merchant.payeeUpiID} category={merchant.category}/>
-            ):<h3>No Recent Merchants</h3>
+            ):<h3 className='noMerch' >No Recent Merchants</h3>
         }
     </div>
   )

@@ -14,8 +14,8 @@ const Dashboard = () => {
   const navigate = useNavigate();
   
     const [dashboardData, setDashboardData] = useState({
-        spent:53688,
-        budget:60000,
+        spent:0,
+        budget:1,
         merchants:[],
         user_name:"",
         picture:"_",
@@ -31,10 +31,13 @@ const Dashboard = () => {
                             Authorization: `Bearer ${localStorage.getItem("JWT")}`
                         }
                     });
+                    
+                    if (response.status === 401)
+                        navigate("/login")
+                    
                     const parsedData = await response.json();
                     setDashboardData(parsedData);
-                    if (parsedData.user_name === "")
-                        navigate("/login")
+                    
             }
 
             catch (err) {

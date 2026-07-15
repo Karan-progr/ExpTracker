@@ -10,33 +10,33 @@ const Expenses = () => {
     const [expenses, setExpenses] = useState([
         {
             category: "Food",
-            budget: 8000,
-            spent: 5400,
+            budget: 0,
+            spent: 0,
         },
         {
             category: "Transport",
-            budget: 3000,
-            spent: 1850,
+            budget: 0,
+            spent: 0,
         },
         {
             category: "Shopping",
-            budget: 6000,
-            spent: 4200,
+            budget: 0,
+            spent: 0,
         },
         {
             category: "Entertainment",
-            budget: 2500,
-            spent: 1700,
+            budget: 0,
+            spent: 0,
         },
         {
             category: "Health",
-            budget: 4000,
-            spent: 950,
+            budget: 0,
+            spent: 0,
         },
         {
             category: "Other",
-            budget: 3500,
-            spent: 1200,
+            budget: 0,
+            spent: 0,
         }
     ]);
 

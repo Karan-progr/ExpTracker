@@ -12,6 +12,7 @@
     text-indent: 1em;
 }
 
-.Merchants h3 {
+.Merchants .noMerch {
     color: gray;
+    margin-top: 30px;
 }

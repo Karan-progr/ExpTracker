@@ -15,7 +15,7 @@ const Merchant = ({name, upiID, category}) => {
           }
       })
     }}>
-        <h3>{name}</h3>
+        <h3>{name.slice(0, 8)}{name.length > 8?"...":""}</h3>
         <p>{category}</p>
     </div>
   )

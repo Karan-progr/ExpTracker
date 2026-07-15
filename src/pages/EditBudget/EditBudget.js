@@ -4,16 +4,19 @@ import { useState } from 'react';
 import API_URL from '../../config'
 import { FaSave } from "react-icons/fa";
 import Footer from '../../components/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const EditBudget = () => {
+
+    const navigate = useNavigate();
   
     const [budget, setBudget] = useState([
-        { category: "Food", budget: 10000 },
-        { category: "Transport", budget: 3000 },
-        { category: "Shopping", budget: 5000 },
-        { category: "Entertainment", budget: 2000 },
-        { category: "Health", budget: 1500 },
-        { category: "Other", budget: 1000 }
+        { category: "Food", budget: 0 },
+        { category: "Transport", budget: 0 },
+        { category: "Shopping", budget: 0 },
+        { category: "Entertainment", budget: 0 },
+        { category: "Health", budget: 0 },
+        { category: "Other", budget: 0 }
     ]);
 
     useEffect(()=> {
@@ -44,6 +47,7 @@ const EditBudget = () => {
             },
             body:JSON.stringify(budget)
         });
+        navigate("/");
     }
 
     function handleChange(category, amount) {
