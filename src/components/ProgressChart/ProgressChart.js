@@ -3,7 +3,6 @@ import "./ProgressChart.css"
 
 const ProgressChart = ({amount, percent, color}) => {
 
-    console.log (amount);
 
     const [currentPercent, setCurrentPercent] = useState(0);
     useEffect (() => {

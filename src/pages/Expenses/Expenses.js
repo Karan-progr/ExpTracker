@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "./Expenses.css"
+import API_URL from '../../config';
+import { useNavigate } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
 
 const Expenses = () => {
 
-    const expenses = [
+    const [expenses, setExpenses] = useState([
         {
             category: "Food",
             budget: 8000,
@@ -35,16 +38,36 @@ const Expenses = () => {
             budget: 3500,
             spent: 1200,
         }
-    ];
+    ]);
+
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        async function fetchExpenses() {
+            const res = await fetch(`${API_URL}/my-expenses`, {
+                method:"GET",
+                headers:{
+                    Authorization:`Bearer ${localStorage.getItem("JWT")}`
+                }
+            })
+            const data = await res.json();
+            setExpenses(data);
+            console.log (data);
+        }
+        fetchExpenses();
+    }, [])
 
   return (
     <div className="Expenses">
         <div className='Expenses-header'>
             <h1>My Expenses</h1>
-            <button>Edit Budget</button>
+            <button onClick={() => {
+                navigate("/edit-budget")
+            }}>Edit Budget</button>
         </div>
 
-        {expenses.map((expense) => {
+        {
+        expenses.map((expense) => {
             const percentage =
                 expense.budget > 0
                     ? Math.min((expense.spent / expense.budget) * 100, 100)
@@ -68,6 +91,8 @@ const Expenses = () => {
                 </div>
             );
         })}
+
+        <Footer />
 
     </div>
   )

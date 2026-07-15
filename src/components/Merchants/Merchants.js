@@ -4,6 +4,8 @@ import Merchant from './Merchant/Merchant';
 
 const Merchants = ({merchants}) => {
 
+  console.log (merchants);
+
   
     // const [merchants, setMerchants] = useState([
     //     {
@@ -33,7 +35,7 @@ const Merchants = ({merchants}) => {
         <h2>Recent Merchants</h2>
         { 
             merchants.length > 0? merchants.map ((merchant) => 
-             <Merchant name = {merchant.name} upiId = {merchant.upiId} category={merchant.category}/>
+             <Merchant name = {merchant.payeeName} upiID = {merchant.payeeUpiID} category={merchant.category}/>
             ):<h3>No Recent Merchants</h3>
         }
     </div>

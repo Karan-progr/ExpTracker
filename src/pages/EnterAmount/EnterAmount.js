@@ -11,12 +11,14 @@ const EnterAmount = () => {
     const params = Object.fromEntries(url.searchParams.entries());
 
     const [amount, setAmount] = useState(0);
+    const [category, setCategory] = useState("Food");
 
     async function handleSubmit(e) {
         e.preventDefault();
 
         window.location.href = `upi://pay?pa=${params.pa}&pn=${params.pn}&am=${amount}&cu=INR`;
 
+        console.log (amount, category);
 
         fetch(`${API_URL}/new-transaction` ,{
             method:"POST",
@@ -24,10 +26,15 @@ const EnterAmount = () => {
                 Authorization: `Bearer ${localStorage.getItem("JWT")}`,
                 "Content-Type": "application/json"
             },
-            body:{
-                amount:amount
-            }
+            body:JSON.stringify({
+                amount:amount,
+                category:category,
+                payeeUpiID:params.pa,
+                payeeName:params.pn
+            })
         })
+
+        console.log ( amount,category,params.pa,params.pn);
     }
 
   return (
@@ -40,6 +47,7 @@ const EnterAmount = () => {
                     autoFocus
                     type="number"
                     placeholder="0"
+                    required
                     onChange={(e)=>
                         setAmount(e.target.value)
                     }
@@ -50,13 +58,15 @@ const EnterAmount = () => {
         <div className="category">
             <label htmlFor="category">Category</label>
 
-            <select id="category" defaultValue="food">
-                <option value="food">Food</option>
-                <option value="transport">Transport</option>
-                <option value="shopping">Shopping</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="health">Health</option>
-                <option value="other">Other</option>
+            <select id="category"
+                onChange={(e) => {setCategory(e.target.value)}}
+            >
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Health">Health</option>
+                <option value="Other">Other</option>
             </select>
         </div>
 

@@ -3,6 +3,7 @@ import "./EditBudget.css"
 import { useState } from 'react';
 import API_URL from '../../config'
 import { FaSave } from "react-icons/fa";
+import Footer from '../../components/Footer/Footer';
 
 const EditBudget = () => {
   
@@ -24,7 +25,11 @@ const EditBudget = () => {
                 }
             });
             const data = await res.json();
-            setBudget(data);
+
+            if (data && data.length !== 0) {
+                setBudget(data);
+            }
+
         }
 
         fetchBudget();
@@ -61,19 +66,21 @@ const EditBudget = () => {
     return (
     <div className='EditBudget'>
         <div className='EditBudget-Header'>
-            <h1>Your Budget ₹ {total}</h1>
-            <FaSave onClick={() => {updateBudget()}} className='save-icon' />
+            <h1> ₹{total.toLocaleString()}</h1>
+            <h3 onClick={() => {updateBudget()}} className='save-icon'>Save</h3>
         </div>
     {budget.map((card)=>
         <div className='BudgetCard' key={card.category}>
             <h2>{card.category}</h2>
             <input required type="number" placeholder='0' value={card.budget} onChange={(e) => {
                 handleChange(card.category, e.target.value);
-            }} >
+            }} min={0} >
                 
             </input>
         </div>
     )}
+
+        <Footer />
     </div>
   )
 }

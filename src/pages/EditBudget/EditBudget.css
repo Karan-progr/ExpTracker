@@ -8,21 +8,40 @@
 
 .EditBudget-Header {
     position: fixed;
-    inset: 0 0 auto 0;
+    top: 0;
+    right: 10px;
+    left: 10px;
     height: 55px;
     padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--google-blue);
-    color: #42f5b9;
+    color: black;
     z-index: 1000;
-    border: 2px solid navy;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: white;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.233);
+}
+
+.EditBudget span {
+    color: navy;
 }
 
 .EditBudget-Header .save-icon {
-    font-size: 2rem;
     cursor: pointer;
+    color: white;
+    background-color: var(--google-blue);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 1px 1px 10px 0px rgba(66, 120, 255, 0.37);
+}
+
+.EditBudget-Header .save-icon:hover {
+    background-color: rgb(66, 119, 255);
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 0px rgba(66, 120, 255, 0.467);
+    transform: translateY(-2px);
 }
 
 .BudgetCard {
@@ -52,7 +71,6 @@
 
 .BudgetCard input:focus {
     outline: none;
-    border-color: #10B981;
-    box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 10px rgba(16, 69, 185, 0.4);
 }
 

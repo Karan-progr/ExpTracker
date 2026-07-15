@@ -1,3 +1,3 @@
-const API_URL = "http://10.17.153.87:3500";
+const API_URL = "https://door-executives-sao-trails.trycloudflare.com";
 
 export default API_URL;

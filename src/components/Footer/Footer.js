@@ -10,7 +10,7 @@ const Footer = () => {
     <div className='Footer'>
         <Link to="/my-expenses" className='notQr'><IoReceiptOutline /></Link>
         <Link to="/scan" className='qr'><IoMdQrScanner /></Link>
-        <Link to="/scan" className='notQr'><IoSettingsOutline /></Link>
+        <Link to="/settings" className='notQr'><IoSettingsOutline /></Link>
     </div>
   )
 }

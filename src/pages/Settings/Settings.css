@@ -1,0 +1,36 @@
+.Settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 10px;
+}
+
+.Settings textarea {
+    display: block;
+    width: 80vw;
+    padding: 5px;
+    border-color: var(--google-blue);
+    outline: none;
+}
+
+.Settings button {
+    background-color: var(--google-blue);
+    margin: 10px;
+    display: block;
+    margin-left: auto;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 0px rgba(66, 134, 244, 0.664);
+}
+
+.Settings .message {
+    width: 80vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

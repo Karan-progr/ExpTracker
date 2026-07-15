@@ -17,8 +17,8 @@ const Dashboard = () => {
         spent:53688,
         budget:60000,
         merchants:[],
-        name:"",
-        picture:"",
+        user_name:"",
+        picture:"_",
         expenses:[]
     })
 
@@ -47,7 +47,7 @@ const Dashboard = () => {
   
   return (
     <>
-        <Header name = {dashboardData.name} picture = {dashboardData.picture}/>
+        <Header name = {dashboardData.user_name} picture = {dashboardData.picture}/>
         <DashboardComp dashboardData={dashboardData}/>
         <div className='floating-toolbar'>
 

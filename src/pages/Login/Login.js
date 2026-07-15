@@ -3,9 +3,11 @@ import "./Login.css";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "./firebase";
 import API_URL from "../../config"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const navigate = useNavigate();
   return (
     <div className="Login">
       <div className="login-header">
@@ -31,6 +33,8 @@ const Login = () => {
               });
 
               console.log ("login succesfull");
+
+              navigate("/");
 
           }
         }>

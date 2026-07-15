@@ -1,0 +1,12 @@
+.FetchError {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.FetchError h2 {
+    color: var(--google-blue);
+}
