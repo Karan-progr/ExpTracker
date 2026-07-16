@@ -6,11 +6,10 @@ const Header = ({name, picture}) => {
 
     const navigate = useNavigate();
 
-    console.log (picture);
 
     return (
         <div className="Header">
-            <h1>Hi {name}!</h1>
+            <h1>Hi {name.split(" ")[0]}!</h1>
             { name !== ""? <img src={picture} alt='profile'></img>
             :<button onClick={() => {
                 navigate("/login");

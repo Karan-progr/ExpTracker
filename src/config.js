@@ -1,3 +1,3 @@
-const API_URL = "https://johnston-suspension-womens-yrs.trycloudflare.com";
+const API_URL = "https://nascar-lynn-semi-speeches.trycloudflare.com";
 
 export default API_URL;
