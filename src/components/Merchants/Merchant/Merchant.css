@@ -1,16 +1,17 @@
 .Merchant {
-    display: flex;
-    flex-wrap: wrap;
-    width: 40%;
-    text-indent: 1em;
+    flex: 1 1 140px;
+    max-width: 120px;
+    min-width: 120px;
+
     margin: 10px;
-    border: 1px solid rgba(128, 128, 128, 0.192);
-    box-shadow: 1px 1px 10px 0px rgba(53, 232, 8, 0.211);
+    padding: 10px 10px;
     border-radius: 1em;
-    padding: 10px 0px;
-    height: 50px;
-    flex-direction: column;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.418) ;
 }
 
 .Merchant p {
