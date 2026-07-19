@@ -1,3 +1,3 @@
-const API_URL = "http://10.44.11.245:3500";
+const API_URL = "https://quantum-alternatively-happens-christina.trycloudflare.com";
 
 export default API_URL;
