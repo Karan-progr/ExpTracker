@@ -78,7 +78,9 @@ const EditBudget = () => {
             <h2>{card.category}</h2>
             <input required type="number" placeholder='0' value={card.budget} onChange={(e) => {
                 handleChange(card.category, e.target.value);
-            }} min={0} >
+            }}
+            onClick={(e) => e.target.select()}
+            min={0} >
                 
             </input>
         </div>
