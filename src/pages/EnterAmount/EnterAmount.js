@@ -56,7 +56,6 @@ const EnterAmount = () => {
         </div>
 
         <div className="category">
-            <label htmlFor="category">Category</label>
 
             <select id="category"
                 onChange={(e) => {setCategory(e.target.value)}}
@@ -68,6 +67,7 @@ const EnterAmount = () => {
                 <option value="Health">Health</option>
                 <option value="Other">Other</option>
             </select>
+            <button>Pay</button>
         </div>
 
         <p className="hint">

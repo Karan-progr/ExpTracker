@@ -26,6 +26,10 @@ const Settings = () => {
   return (
     <div className='Settings'>
         <div className='message'>
+        <button className='' onClick={()=>{
+            localStorage.setItem("JWT", null);
+            navigate("/login")
+        }}>Logout</button>
             <h2>This page is being constructed</h2>
             <p>If you have any query, <br /> feel free to reach us</p>
         </div>
